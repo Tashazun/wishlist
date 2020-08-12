@@ -22,7 +22,7 @@ function App() {
         </button>
       </header>
       <main>
-        {modalOpen === true && <Modal />}
+        {modalOpen === true && <Modal state={modalOpen} setModalOpen={setModalOpen}/>}
         <div>
 
         </div>
