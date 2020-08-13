@@ -34,11 +34,13 @@
   }
 
   &__item {
+    display: flex;
+    justify-content: space-between;
     width: 70%;
     height: 10em;
     margin: .5em;
     background-color: blue;
-    border-radius: 5px;;
+    border-radius: 5px;
   }
 
   &__company {

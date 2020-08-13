@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react';
 
 import './App.scss';
 import Modal from '../Modal/Modal';
+import Dialog from '../Dialog/Dialog';
+
 import { TiPlus } from 'react-icons/ti';
+import { FiTrash2 } from 'react-icons/fi';
 
 function App() {
 
   const [modalOpen, setModalOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
   const [storedValues, setStoredValues] = useState([]);
-  console.log('stored', storedValues);
 
   useEffect(() => {
 
@@ -47,9 +50,15 @@ function App() {
       <main className="app__content">
         {modalOpen === true && <Modal state={modalOpen} setModalOpen={setModalOpen}/>}
         {storedValues && x.map((listItem, index) => (
-            <div className="app__item" key={index}>
+          <div className="app__item" key={index}>
+               <Dialog storageKey={listItem} setDialogOpen={setDialogOpen}/>
+              <div>
                 <h2 className="app__company">{listItem}</h2>
                 <p className="app__title">{y[index]}</p>
+              </div>
+              <button onClick={() => setDialogOpen(true)}>
+                <FiTrash2/>
+              </button>
             </div>
         ))}
       </main>
