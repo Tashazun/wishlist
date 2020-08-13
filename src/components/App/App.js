@@ -72,7 +72,7 @@ function App() {
                 <h2 className="app__company">{listItem}</h2>
                 <p className="app__title">{y[index]}</p>
               </div>
-              <div>
+              <div className="app__item-features">
                 <button
                   className="app__delete"
                   onClick={() => setDialogOpen(true)}

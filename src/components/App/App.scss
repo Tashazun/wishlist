@@ -23,7 +23,10 @@
 
   &__button {
     height: 2.5em;
-    width: 68%;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(166,166,166,1);
   }
 
   &__content {
@@ -40,6 +43,7 @@
     height: 10em;
     margin: .5em;
     border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(166,166,166,1);
   }
 
   &__company {
@@ -52,8 +56,16 @@
     color: #fff;
   }
 
+  &__item-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
   &__delete {
     height: 2em;
+    width: 2em;
     margin: .5em;
     background-color: transparent;
     border: none;

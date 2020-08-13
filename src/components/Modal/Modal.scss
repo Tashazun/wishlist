@@ -54,6 +54,15 @@
       border: 1px solid #851AEE;
     }
 
+    &--invalid {
+      border: 1px solid red;
+    }
+
+  }
+
+  &__error-message {
+    text-align: center;
+    color: red;
   }
 
   &__submit {
