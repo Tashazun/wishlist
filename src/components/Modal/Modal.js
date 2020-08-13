@@ -5,9 +5,10 @@ import { GrClose} from "react-icons/gr";
 import './Modal.scss';
 import useForm from '../../utilities/useForm';
 
-const Modal = ({state, setModalOpen}) => {
+const Modal = ({ setModalOpen }) => {
   const { values, errors, handleChange, handleSubmit } = useForm();
 
+  console.log(values)
   return (
     <div className="wishlist">
       <div className="wishlist__content">

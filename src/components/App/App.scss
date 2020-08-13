@@ -34,7 +34,6 @@
   }
 
   &__item {
-    position: relative;
     display: flex;
     justify-content: space-between;
     width: 70%;
@@ -69,7 +68,6 @@
   }
 
   &__time {
-    position: absolute;
     bottom: 0;
     right: 0;
     color: #fff;

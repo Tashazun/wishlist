@@ -4,8 +4,6 @@ import "./Dialog.scss"
 
 const Dialog = ({storageKey, setDialogOpen}) => {
 
-  console.log(storageKey);
-
   const handleDeleteItem = key => {
     localStorage.removeItem(key);
     document.location.reload();
@@ -21,7 +19,7 @@ const Dialog = ({storageKey, setDialogOpen}) => {
             type="button"
             className="dialog__delete"
             aria-label="close modal"
-            onClick={() => handleDeleteItem(storageKey[0])}
+            onClick={() => handleDeleteItem(storageKey)}
             >
             Delete
           </button>

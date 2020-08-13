@@ -72,13 +72,15 @@ function App() {
                 <h2 className="app__company">{listItem}</h2>
                 <p className="app__title">{y[index]}</p>
               </div>
-              <button
-                className="app__delete"
-                onClick={() => setDialogOpen(true)}
-              >
-                <FiTrash2/>
-              </button>
-              <p className="app__time">added {diffTime[index]} minutes ago</p>
+              <div>
+                <button
+                  className="app__delete"
+                  onClick={() => setDialogOpen(true)}
+                >
+                  <FiTrash2/>
+                </button>
+                <p className="app__time">added {diffTime[index]} minutes ago</p>
+              </div>
             </div>
         ))}
       </main>
