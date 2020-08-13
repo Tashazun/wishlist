@@ -51,12 +51,15 @@ function App() {
         {modalOpen === true && <Modal state={modalOpen} setModalOpen={setModalOpen}/>}
         {storedValues && x.map((listItem, index) => (
           <div className="app__item" key={index}>
-               <Dialog storageKey={listItem} setDialogOpen={setDialogOpen}/>
+               {dialogOpen && <Dialog storageKey={listItem} setDialogOpen={setDialogOpen}/>}
               <div>
                 <h2 className="app__company">{listItem}</h2>
                 <p className="app__title">{y[index]}</p>
               </div>
-              <button onClick={() => setDialogOpen(true)}>
+              <button
+                className="app__delete"
+                onClick={() => setDialogOpen(true)}
+              >
                 <FiTrash2/>
               </button>
             </div>

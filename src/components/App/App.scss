@@ -50,6 +50,20 @@
   &__title {
     margin: .5em 1.5em;
   }
+
+  &__delete {
+    height: 2em;
+    margin: .5em;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #F1F1F180;
+    }
+  }
 }
 
 ::-webkit-scrollbar {

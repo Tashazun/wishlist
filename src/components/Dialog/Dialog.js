@@ -13,25 +13,27 @@ const Dialog = ({storageKey, setDialogOpen}) => {
 
   return (
     <div className="dialog">
-      <h2>Delete Job</h2>
-      <p>Are you sure you want to delete this job?</p>
       <div className="dialog__content">
-        <button
-          type="button"
-          className="dialog__close"
-          aria-label="close modal"
-          onClick={() => handleDeleteItem(storageKey[0])}
-          >
-          Delete
-        </button>
-        <button
-          type="button"
-          className="dialog__close"
-          aria-label="close modal"
-          onClick={() => setDialogOpen(false)}
-          >
-          Cancel
-        </button>
+        <h2 className="dialog__heading">Delete Job</h2>
+        <p className="dialog__question">Are you sure you want to delete this job?</p>
+        <div className="dialog__buttons">
+          <button
+            type="button"
+            className="dialog__delete"
+            aria-label="close modal"
+            onClick={() => handleDeleteItem(storageKey[0])}
+            >
+            Delete
+          </button>
+          <button
+            type="button"
+            className="dialog__close"
+            aria-label="close modal"
+            onClick={() => setDialogOpen(false)}
+            >
+            Cancel
+          </button>
+        </div>
       </div>
     </div>
   )

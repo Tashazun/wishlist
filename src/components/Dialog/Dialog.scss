@@ -1,0 +1,46 @@
+.dialog {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #30237C60;
+
+  &__content {
+    background:#F1F1F1;
+    border-radius: 5px;
+    width: 25em;
+  }
+
+  &__heading,
+  &__question {
+    text-align: center;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
+  }
+
+  &__delete,
+  &__close {
+    height: 2.5em;
+    width: 8em;
+    border: none;
+    border-radius: 5px;
+    margin: .5em;
+    color: #fff;
+  }
+
+  &__delete {
+    background-color: #851AEE;
+  }
+
+  &__close {
+    background-color: #B3B3B3;
+  }
+}
