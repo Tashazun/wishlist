@@ -33,6 +33,11 @@ function App() {
     return title;
   })
 
+  function randomColor() {
+    return Math.floor(Math.random()*16777215).toString(16);
+  };
+  console.log(randomColor);
+
   return (
     <div className="app">
       <header className="app__header">
@@ -50,7 +55,7 @@ function App() {
       <main className="app__content">
         {modalOpen === true && <Modal state={modalOpen} setModalOpen={setModalOpen}/>}
         {storedValues && x.map((listItem, index) => (
-          <div className="app__item" key={index}>
+          <div className="app__item" key={index} style={{background : `#${randomColor()}`}}>
                {dialogOpen && <Dialog storageKey={listItem} setDialogOpen={setDialogOpen}/>}
               <div>
                 <h2 className="app__company">{listItem}</h2>
