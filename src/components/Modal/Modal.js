@@ -6,7 +6,7 @@ import useForm from '../../utilities/useForm';
 
 const Modal = ({state, setModalOpen}) => {
   const { values, errors, handleChange, handleSubmit } = useForm();
- 
+
   return (
     <div className="wishlist">
       <button
@@ -36,7 +36,7 @@ const Modal = ({state, setModalOpen}) => {
           id="company-name"
           className={`wishlist__input ${errors.name && 'wishlist__input--invalid'}`}
           type="text"
-          name="company"
+          name="name"
           onChange={handleChange}
           // value takes username input or if none exist set the default to empty string. Prevents uncontrolled to controlled
           value={values.name || ""}

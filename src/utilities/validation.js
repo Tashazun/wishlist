@@ -5,7 +5,7 @@ export default function validate(values) {
   }
 
   if (!values.title) {
-    errors.title = 'Password is required';
+    errors.title = 'Job title is required';
   }
 
   return errors;
