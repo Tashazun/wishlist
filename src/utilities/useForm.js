@@ -18,7 +18,9 @@ const useForm = () => {
     }
 
     if(Object.keys(errors).length === 0 && Object.keys(values).length !== 0) {
-      localStorage.setItem(values.name, values.title);
+      const arr = [new Date(), values.title];
+
+      localStorage.setItem(values.name, JSON.stringify(arr));
     }
 
   };

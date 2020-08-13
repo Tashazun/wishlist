@@ -19,24 +19,35 @@ function App() {
 
       for(let i=0, len=localStorage.length; i<len; i++) {
         const key = localStorage.key(i);
-        const value = localStorage[key];
-        setStoredValues(x => [...x, {[key] : value}]);
+        const value = JSON.parse(localStorage[key]);
+        setStoredValues(x => [...x, {[key] : value[1]}, {'date' : value[0]}]);
       }
   },[]);
 
-  const x = storedValues.map((a, i) => {
-    const key = Object.keys(a);
+  const x = storedValues.flatMap(a => {
+    const key = Object.keys(a).filter(data => data !== 'date');
     return key;
   })
-  const y = storedValues.map((a, i) => {
-    const title = Object.values(a);
+
+  const y = storedValues.flatMap(a => {
+    const title = Object.values(a).filter(data => !data.includes('2020'));
     return title;
+  })
+
+  const datesArr = storedValues.flatMap(a => {
+    const b = Object.values(a).filter(data => data.includes('2020'));
+    return b;
+  })
+
+  const diffTime = datesArr.map (a => {
+    const c = (new Date() - new Date(a));
+    const diffMins = Math.round(((c % 86400000) % 3600000) / 60000);
+    return diffMins;
   })
 
   function randomColor() {
     return Math.floor(Math.random()*16777215).toString(16);
   };
-  console.log(randomColor);
 
   return (
     <div className="app">
@@ -67,6 +78,7 @@ function App() {
               >
                 <FiTrash2/>
               </button>
+              <p className="app__time">added {diffTime[index]} minutes ago</p>
             </div>
         ))}
       </main>

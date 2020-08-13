@@ -34,6 +34,7 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 70%;
@@ -66,9 +67,17 @@
       background-color: #F1F1F180;
     }
   }
+
+  &__time {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    margin: .5em;
+  }
 }
 
 ::-webkit-scrollbar {
   width: 0px;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent;
 }
