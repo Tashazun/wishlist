@@ -1,17 +1,56 @@
-.app-wrapper {
+.app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  background-color: #F1F1F1;
+  height: 100vh;
+  width: 600px;
 
-
-  .app-wrapper__header {
-    background-color: #282c34;
-    min-height: 100vh;
+  &__header {
+    background-color: #F1F1F1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: #30237C;
   }
+
+  &__heading {
+    margin: 1em 1em 0 1em;
+  }
+  &__count {
+    margin: 0 .5em .5em .5em;
+  }
+
+  &__button {
+    height: 2.5em;
+    width: 68%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+  }
+
+  &__item {
+    width: 70%;
+    height: 10em;
+    margin: .5em;
+    background-color: blue;
+    border-radius: 5px;;
+  }
+
+  &__company {
+    margin: .5em 1em;
+  }
+
+  &__title {
+    margin: .5em 1.5em;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }

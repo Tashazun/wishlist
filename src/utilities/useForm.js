@@ -8,7 +8,9 @@ const useForm = () => {
   const [errors, setErrors] = useState({});
 
   const handleSubmit = event => {
-    if (event) event.preventDefault();
+    if (!Object.keys(values).length) {
+      event.preventDefault();
+    } 
     setErrors(validate(values));
 
     if(Object.keys(errors).length !== 0) {

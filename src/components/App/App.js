@@ -31,28 +31,27 @@ function App() {
   })
 
   return (
-    <div className="app-wrapper">
-      <header className="app-wrapper__header">
-        <h1>Wishlist</h1>
+    <div className="app">
+      <header className="app__header">
+        <h1 className="app__heading">Wishlist</h1>
+        <p className="app__count">{localStorage.length} jobs</p>
         <button
           type="submit"
-          className="app-wrapper__button"
+          className="app__button"
           onClick={() => setModalOpen(true)}
           aria-label="submit new wishlist item"
         >
           <TiPlus />
         </button>
       </header>
-      <main>
+      <main className="app__content">
         {modalOpen === true && <Modal state={modalOpen} setModalOpen={setModalOpen}/>}
-        <div>
         {storedValues && x.map((listItem, index) => (
-            <div className="frame__thumbnail" key={index}>
-                <p>{listItem}</p>
-                <p>{y[index]}</p>
+            <div className="app__item" key={index}>
+                <h2 className="app__company">{listItem}</h2>
+                <p className="app__title">{y[index]}</p>
             </div>
         ))}
-        </div>
       </main>
     </div>
   );

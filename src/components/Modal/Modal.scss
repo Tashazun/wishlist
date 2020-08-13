@@ -1,0 +1,74 @@
+.wishlist {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #30237C60;
+
+  &__content {
+    background:#F1F1F1;
+    border-radius: 5px;
+    width: 25em;
+  }
+
+  &__close {
+    border: none;
+    margin: .5em;
+    padding: .2em .2em 0 .2em;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: 1px solid #851AEE;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+  }
+
+  &__label {
+    text-align: center;
+  }
+
+  &__input {
+    height: 2.5em;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px;
+    background-color: #F1F1F1;
+    margin: .5em 1.5em;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #851AEE;
+    }
+
+  }
+
+  &__submit {
+    height: 2.5em;
+    border: 1px solid #851AEE;
+    border-radius: 5px;
+    background-color: #851AEE;
+    color: #fff;
+    margin: .5em 1.5em;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: #530DB6;
+    }
+  }
+}
