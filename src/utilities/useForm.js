@@ -12,12 +12,15 @@ const useForm = () => {
       event.preventDefault();
     } 
     setErrors(validate(values));
-
+    
     if(Object.keys(errors).length !== 0) {
       focusOnError();
-    } else {
+    }
+
+    if(Object.keys(errors).length === 0 && Object.keys(values).length !== 0) {
       localStorage.setItem(values.name, values.title);
     }
+
   };
 
   const focusOnError = () => {
